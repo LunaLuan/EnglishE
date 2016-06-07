@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EnglishE</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_danh_sach_chu_de">DanhSachChuDe</string>
+    <string name="title_activity_chu_de">ChuDeActivity</string>
+    <string name="title_activity_sub">SubActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_kiem_tra">KiemTraActivity</string>
+</resources>
