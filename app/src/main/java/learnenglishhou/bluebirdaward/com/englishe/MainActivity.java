@@ -1,9 +1,17 @@
 package learnenglishhou.bluebirdaward.com.englishe;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import learnenglishhou.bluebirdaward.com.englishe.chude.ChuDeActivity;
+import learnenglishhou.bluebirdaward.com.englishe.danhsachchude.DanhSachChuDeActivity;
+import learnenglishhou.bluebirdaward.com.englishe.danhsachchude.DanhSachChuDeAdapter;
+import learnenglishhou.bluebirdaward.com.englishe.model.EnglishEDatabase;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,7 +20,17 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        EnglishEDatabase db=new EnglishEDatabase(this);
+
+        TextView tv=(TextView) findViewById(R.id.tvHello);
+
+        Intent i=new Intent(MainActivity.this, DanhSachChuDeActivity.class);
+        startActivity(i);
+
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

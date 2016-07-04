@@ -2,12 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="learnenglishhou.bluebirdaward.com.englishe" >
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
+
             android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
@@ -22,14 +28,12 @@
         </activity>
         <activity
             android:name=".chude.ChuDeActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_chu_de" >
         </activity>
         <activity
-            android:name=".chude.SubActivity"
-            android:label="@string/title_activity_sub" >
-        </activity>
-        <activity
             android:name=".kiemtra.KiemTraActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_kiem_tra" >
         </activity>
     </application>

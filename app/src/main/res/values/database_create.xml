@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sql_create_database">
+CREATE TABLE LoaiCauHoi (
+    maLoaiCauHoi integer primary key autoincrement,
+    loaiCauHoi text null
+);
+
+
+CREATE TABLE HuyHieu (
+    maHuyHieu integer  PRIMARY KEY AUTOINCREMENT,
+    anhHuyHieu text,
+    tenHuyHieu text null
+);
+
+Insert Into HuyHieu(anhHuyHieu, tenHuyHieu)
+Values(\'empty.jpg\', \'Chưa có\');
+
+
+CREATE TABLE ChuDe (
+		maChuDe integer primary key autoincrement,
+   	anhChuDe text null,
+   	engSub text null,
+   	vietSub text null,
+   	diemNoi integer default 0,
+   	diemDich integer default 0,
+   	diemCauHoi integer default 0,
+   	maHuyHieu integer default 1,
+   	foreign key (maHuyHieu) references HuyHieu(maHuyHieu)
+);
+
+
+CREATE TABLE CauHoi (
+     maCauHoi integer primary key autoincrement,
+     ndCauHoi text not null,
+     dapAn text not null,
+     maLoaiCauHoi integer,
+     maChuDe integer,
+
+     foreign key (maLoaiCauHoi) references LoaiCauHoi(maLoaiCauHoi),
+     foreign key (maChuDe) references ChuDe(maChuDe)
+);
+
+
+    </string>
+
+
+
+</resources>
